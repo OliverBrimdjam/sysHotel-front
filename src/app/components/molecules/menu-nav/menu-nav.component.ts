@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuNavComponent implements OnInit {
   homeIcon = 'home';
+  homeUrl = '/';
   historyIcon = 'history';
+  historyUrl = '/history';
   chartIcon = 'insert_chart';
+  chartUrl = '/chart';
   addIcon = 'add';
+
   ordersIcon = 'rom_service';
-  hotelIcon = 'hotel';
+  ordersUrl = '/orders';
 
 
   constructor() { }

@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ButtonFlatComponent } from './components/atoms/button-flat/button-flat.component';
 import { HeaderComponent } from './components/molecules/header/header.component';
 import { MenuNavComponent } from './components/molecules/menu-nav/menu-nav.component';
+import { SideBarComponent } from './components/molecules/side-bar/side-bar.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { MenuNavComponent } from './components/molecules/menu-nav/menu-nav.compo
     ButtonIconComponent,
     ButtonFlatComponent,
     HeaderComponent,
-    MenuNavComponent
+    MenuNavComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
