@@ -1,7 +1,7 @@
 <div class="container">
   <app-header></app-header>
   <div class="container__wrapper">
-    <app-side-bar></app-side-bar>
-
+    <app-side-bar [collection]="buttonsArray"></app-side-bar>
+    <ng-container *ngComponentOutlet="mainComponent"></ng-container>
   </div>
 </div>
