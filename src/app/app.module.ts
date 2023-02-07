@@ -9,13 +9,17 @@ import { ButtonIconComponent } from './components/atoms/button-icon/button-icon.
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonFlatComponent } from './components/atoms/button-flat/button-flat.component';
+import { HeaderComponent } from './components/molecules/header/header.component';
+import { MenuNavComponent } from './components/molecules/menu-nav/menu-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLogoComponent,
     ButtonIconComponent,
-    ButtonFlatComponent
+    ButtonFlatComponent,
+    HeaderComponent,
+    MenuNavComponent
   ],
   imports: [
     BrowserModule,
