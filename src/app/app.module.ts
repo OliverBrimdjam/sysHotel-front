@@ -14,6 +14,8 @@ import { MenuNavComponent } from './components/molecules/menu-nav/menu-nav.compo
 import { SideBarComponent } from './components/molecules/side-bar/side-bar.component';
 import {MatCardModule} from '@angular/material/card';
 import { MainTemplateComponent } from './components/templates/main-template/main-template.component';
+import { MainComponent } from './pages/main/main.component';
+import { MainScreenComponent } from './components/organisms/screen/main-screen/main-screen.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MainTemplateComponent } from './components/templates/main-template/main
     HeaderComponent,
     MenuNavComponent,
     SideBarComponent,
-    MainTemplateComponent
+    MainTemplateComponent,
+    MainComponent,
+    MainScreenComponent
   ],
   imports: [
     BrowserModule,
