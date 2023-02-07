@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/molecules/header/header.component'
 import { MenuNavComponent } from './components/molecules/menu-nav/menu-nav.component';
 import { SideBarComponent } from './components/molecules/side-bar/side-bar.component';
 import {MatCardModule} from '@angular/material/card';
+import { MainTemplateComponent } from './components/templates/main-template/main-template.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatCardModule} from '@angular/material/card';
     ButtonFlatComponent,
     HeaderComponent,
     MenuNavComponent,
-    SideBarComponent
+    SideBarComponent,
+    MainTemplateComponent
   ],
   imports: [
     BrowserModule,
