@@ -8,12 +8,14 @@ import { MainLogoComponent } from './components/atoms/main-logo/main-logo.compon
 import { ButtonIconComponent } from './components/atoms/button-icon/button-icon.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ButtonFlatComponent } from './components/atoms/button-flat/button-flat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLogoComponent,
-    ButtonIconComponent
+    ButtonIconComponent,
+    ButtonFlatComponent
   ],
   imports: [
     BrowserModule,

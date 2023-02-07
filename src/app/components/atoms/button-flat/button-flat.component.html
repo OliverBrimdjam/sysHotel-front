@@ -1,0 +1,2 @@
+<button *ngIf="url" mat-flat-button color={{colorSchema}} (click)="redirectTo(url)" disabled={{disabled}}>{{content}}</button>
+<button *ngIf="!url" mat-flat-button color={{colorSchema}} (click)="action()" disabled={{disabled}}>{{content}}</button>
