@@ -7,10 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MainTemplateComponent implements OnInit {
   @Input() mainComponent: any;
+
   buttonsArray: any[] = [
-    { nome: 'Home', color: 'primary', disabled: false },
-    { nome: 'Home', color: 'primary', disabled: false },
-    { nome: 'Home', color: 'primary', disabled: false },
+    { nome: 'Available', color: 'primary', disabled: false },
+    { nome: 'Occupied', color: 'primary', disabled: false },
+    { nome: 'Reserved', color: 'primary', disabled: false },
+    { nome: 'Out of Order', color: 'primary', disabled: false },
+    { nome: 'Maintenance', color: 'primary', disabled: false },
+    { nome: 'cleaning', color: 'primary', disabled: false },
   ]
 
   constructor() { }
