@@ -1,4 +1,7 @@
 <div class="container">
   <app-side-bar [collection]="buttonsArray"></app-side-bar>
-  <app-room-overview class="container__content"></app-room-overview>
+  <div class="container--wrapper">
+      <app-room-overview class="container--wrapper__content"></app-room-overview>
+      <app-reserves-overview class="container--wrapper__content"></app-reserves-overview>
+  </div>
 </div>

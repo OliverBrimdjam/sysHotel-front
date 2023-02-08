@@ -3,7 +3,13 @@
   flex-direction: row;
 }
 
-.container__content {
+.container--wrapper {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
+}
+
+.container--wrapper__content {
   margin: 1rem 0.5rem;
 }
