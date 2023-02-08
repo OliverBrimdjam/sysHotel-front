@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-menu-nav',
@@ -12,15 +13,21 @@ export class MenuNavComponent implements OnInit {
   historyUrl = '/history';
   chartIcon = 'insert_chart';
   chartUrl = '/chart';
+  guestIcon = 'person';
+  guestUrl = '/guest';
   addIcon = 'add';
 
   ordersIcon = 'room_service';
   ordersUrl = '/orders';
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  redirectTo(url: string) {
+    this.router.navigate([url]);
   }
 
 }
