@@ -25,6 +25,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import { ChartComponent } from './pages/chart/chart.component';
 import { ChartScreenComponent } from './components/organisms/screen/chart-screen/chart-screen.component';
+import { ReservesOverviewComponent } from './components/molecules/reserves-overview/reserves-overview.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ChartScreenComponent } from './components/organisms/screen/chart-screen
     RoomOverviewComponent,
     TableComponent,
     ChartComponent,
-    ChartScreenComponent
+    ChartScreenComponent,
+    ReservesOverviewComponent
   ],
   imports: [
     BrowserModule,
