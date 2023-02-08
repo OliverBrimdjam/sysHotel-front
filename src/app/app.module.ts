@@ -16,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MainTemplateComponent } from './components/templates/main-template/main-template.component';
 import { MainComponent } from './pages/main/main.component';
 import { MainScreenComponent } from './components/organisms/screen/main-screen/main-screen.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MainScreenComponent } from './components/organisms/screen/main-screen/m
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
