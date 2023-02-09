@@ -33,6 +33,9 @@ import { ButtonBasicComponent } from './components/atoms/button-basic/button-bas
 import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu-dropdown.component';
 import { GuestScreenComponent } from './components/organisms/screen/guest-screen/guest-screen.component';
 import { GuestsOverviewComponent } from './components/molecules/guests-overview/guests-overview.component';
+import { ChartOverviewComponent } from './components/molecules/chart-overview/chart-overview.component';
+import { OrdersOverviewComponent } from './components/molecules/orders-overview/orders-overview.component';
+import { OrdersScreenComponent } from './components/organisms/screen/orders-screen/orders-screen.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { GuestsOverviewComponent } from './components/molecules/guests-overview/
     ButtonBasicComponent,
     MenuDropdownComponent,
     GuestScreenComponent,
-    GuestsOverviewComponent
+    GuestsOverviewComponent,
+    ChartOverviewComponent,
+    OrdersOverviewComponent,
+    OrdersScreenComponent
   ],
   imports: [
     BrowserModule,
