@@ -6,8 +6,27 @@
       "email": "",
       "phone": "",
       "documentType": "",
-      "documentCode": ""
+      "documentCode": "",
+      "status": 1
 
+    }
+  ],
+  "guestStatus": [
+    {
+      "id": 1,
+      "name": "Reserved"
+    },
+    {
+      "id": 2,
+      "name": "Checked In"
+    },
+    {
+      "id": 3,
+      "name": "Checked Out"
+    },
+    {
+      "id": 4,
+      "name": "Disabled"
     }
   ],
   "rooms": [

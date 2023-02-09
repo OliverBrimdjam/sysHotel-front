@@ -31,6 +31,8 @@ import { GuestsComponent } from './pages/guests/guests.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { ButtonBasicComponent } from './components/atoms/button-basic/button-basic.component';
 import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu-dropdown.component';
+import { GuestScreenComponent } from './components/organisms/screen/guest-screen/guest-screen.component';
+import { GuestsOverviewComponent } from './components/molecules/guests-overview/guests-overview.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu
     GuestsComponent,
     HistoryComponent,
     ButtonBasicComponent,
-    MenuDropdownComponent
+    MenuDropdownComponent,
+    GuestScreenComponent,
+    GuestsOverviewComponent
   ],
   imports: [
     BrowserModule,
