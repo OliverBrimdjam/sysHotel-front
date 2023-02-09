@@ -29,6 +29,8 @@ import { ReservesOverviewComponent } from './components/molecules/reserves-overv
 import { OrdersComponent } from './pages/orders/orders.component';
 import { GuestsComponent } from './pages/guests/guests.component';
 import { HistoryComponent } from './pages/history/history.component';
+import { ButtonBasicComponent } from './components/atoms/button-basic/button-basic.component';
+import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { HistoryComponent } from './pages/history/history.component';
     ReservesOverviewComponent,
     OrdersComponent,
     GuestsComponent,
-    HistoryComponent
+    HistoryComponent,
+    ButtonBasicComponent,
+    MenuDropdownComponent
   ],
   imports: [
     BrowserModule,
