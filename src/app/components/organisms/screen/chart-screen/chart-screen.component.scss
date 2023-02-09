@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container--wrapper {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.container--wrapper__content {
+  margin: 1rem 0.5rem;
+  width: 100%;
+}
