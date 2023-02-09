@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {Router} from "@angular/router"
+import { DialogAddReserveComponent } from '../dialog-add-reserve/dialog-add-reserve.component';
+import { ComponentType } from '@angular/cdk/portal';
+import { DialogAddRoomComponent } from '../dialog-add-room/dialog-add-room.component';
+import { DialogAddGuestComponent } from '../dialog-add-guest/dialog-add-guest.component';
+import { DialogAddOrderComponent } from '../dialog-add-order/dialog-add-order.component';
 
 @Component({
   selector: 'app-menu-nav',
@@ -19,14 +25,17 @@ export class MenuNavComponent implements OnInit {
   ordersIcon = 'room_service';
   ordersUrl = '/orders';
   addButtonOptions = [
-    { content: 'Add Reserve', icon: 'calendar_today'},
-    { content: 'Add Order', icon: 'room_service'},
-    { content: 'Add Guest', icon: 'person'},
-    { content: 'Add Room', icon: 'meeting_room'}
+    { content: 'Add Reserve', icon: 'calendar_today', action: () => this.openAddDialog(DialogAddReserveComponent)},
+    { content: 'Add Order', icon: 'room_service', action: () => this.openAddDialog(DialogAddOrderComponent)},
+    { content: 'Add Guest', icon: 'person', action: () => this.openAddDialog(DialogAddGuestComponent)},
+    { content: 'Add Room', icon: 'meeting_room', action: () => this.openAddDialog(DialogAddRoomComponent)}
   ]
   showAddOptions = false;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +46,14 @@ export class MenuNavComponent implements OnInit {
 
   toggleAddOptions() {
     this.showAddOptions = !this.showAddOptions;
+  }
+
+  openAddDialog(component: ComponentType<unknown>) {
+    const dialogRef = this.dialog.open(component);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

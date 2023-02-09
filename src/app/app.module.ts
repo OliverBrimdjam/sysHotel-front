@@ -36,7 +36,14 @@ import { GuestsOverviewComponent } from './components/molecules/guests-overview/
 import { ChartOverviewComponent } from './components/molecules/chart-overview/chart-overview.component';
 import { OrdersOverviewComponent } from './components/molecules/orders-overview/orders-overview.component';
 import { OrdersScreenComponent } from './components/organisms/screen/orders-screen/orders-screen.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { NgChartsModule } from 'ng2-charts';
+import { DialogAddReserveComponent } from './components/molecules/dialog-add-reserve/dialog-add-reserve.component';
+import { DialogAddGuestComponent } from './components/molecules/dialog-add-guest/dialog-add-guest.component';
+import { DialogAddOrderComponent } from './components/molecules/dialog-add-order/dialog-add-order.component';
+import { DialogAddRoomComponent } from './components/molecules/dialog-add-room/dialog-add-room.component';
+
 
 @NgModule({
   declarations: [
@@ -64,7 +71,11 @@ import { NgChartsModule } from 'ng2-charts';
     GuestsOverviewComponent,
     ChartOverviewComponent,
     OrdersOverviewComponent,
-    OrdersScreenComponent
+    OrdersScreenComponent,
+    DialogAddReserveComponent,
+    DialogAddGuestComponent,
+    DialogAddOrderComponent,
+    DialogAddRoomComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +89,8 @@ import { NgChartsModule } from 'ng2-charts';
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
-    NgChartsModule
+    NgChartsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
