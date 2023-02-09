@@ -1,0 +1,6 @@
+<button *ngIf="url" mat-icon-button color={{colorSchema}} (click)="redirectTo(url)" disabled={{disabled}}>
+  <mat-icon>{{iconType}}</mat-icon>
+</button>
+<button *ngIf="!url" mat-icon-button color={{colorSchema}} (click)="action()" disabled={{disabled}}>
+  <mat-icon>{{iconType}}</mat-icon>
+</button>
