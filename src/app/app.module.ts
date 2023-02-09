@@ -31,6 +31,12 @@ import { GuestsComponent } from './pages/guests/guests.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { ButtonBasicComponent } from './components/atoms/button-basic/button-basic.component';
 import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu-dropdown.component';
+import { GuestScreenComponent } from './components/organisms/screen/guest-screen/guest-screen.component';
+import { GuestsOverviewComponent } from './components/molecules/guests-overview/guests-overview.component';
+import { ChartOverviewComponent } from './components/molecules/chart-overview/chart-overview.component';
+import { OrdersOverviewComponent } from './components/molecules/orders-overview/orders-overview.component';
+import { OrdersScreenComponent } from './components/organisms/screen/orders-screen/orders-screen.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -53,7 +59,12 @@ import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu
     GuestsComponent,
     HistoryComponent,
     ButtonBasicComponent,
-    MenuDropdownComponent
+    MenuDropdownComponent,
+    GuestScreenComponent,
+    GuestsOverviewComponent,
+    ChartOverviewComponent,
+    OrdersOverviewComponent,
+    OrdersScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +77,8 @@ import { MenuDropdownComponent } from './components/molecules/menu-dropdown/menu
     MatTableModule,
     MatFormFieldModule,
     MatPaginatorModule,
-    MatInputModule
+    MatInputModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
