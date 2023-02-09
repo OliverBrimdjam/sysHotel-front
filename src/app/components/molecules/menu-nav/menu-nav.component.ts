@@ -14,7 +14,7 @@ export class MenuNavComponent implements OnInit {
   chartIcon = 'insert_chart';
   chartUrl = '/chart';
   guestIcon = 'person';
-  guestUrl = '/guest';
+  guestsUrl = '/guests';
   addIcon = 'add';
 
   ordersIcon = 'room_service';

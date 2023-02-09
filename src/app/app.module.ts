@@ -26,6 +26,9 @@ import {MatInputModule} from '@angular/material/input';
 import { ChartComponent } from './pages/chart/chart.component';
 import { ChartScreenComponent } from './components/organisms/screen/chart-screen/chart-screen.component';
 import { ReservesOverviewComponent } from './components/molecules/reserves-overview/reserves-overview.component';
+import { OrdersComponent } from './pages/orders/orders.component';
+import { GuestsComponent } from './pages/guests/guests.component';
+import { HistoryComponent } from './pages/history/history.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { ReservesOverviewComponent } from './components/molecules/reserves-overv
     TableComponent,
     ChartComponent,
     ChartScreenComponent,
-    ReservesOverviewComponent
+    ReservesOverviewComponent,
+    OrdersComponent,
+    GuestsComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
