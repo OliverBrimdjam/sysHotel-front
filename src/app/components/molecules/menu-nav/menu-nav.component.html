@@ -1,0 +1,11 @@
+<div class="container">
+  <app-button-icon [iconType]="homeIcon" (click)="redirectTo(homeUrl)"></app-button-icon>
+  <app-button-icon [iconType]="historyIcon"  (click)="redirectTo(historyUrl)"></app-button-icon>
+  <app-button-icon [iconType]="chartIcon"  (click)="redirectTo(chartUrl)"></app-button-icon>
+  <app-button-icon [iconType]="ordersIcon"  (click)="redirectTo(ordersUrl)"></app-button-icon>
+  <app-button-icon [iconType]="guestIcon"  (click)="redirectTo(guestsUrl)"></app-button-icon>
+  <div>
+    <app-button-icon [iconType]="addIcon" (click)="toggleAddOptions()"></app-button-icon>
+    <app-menu-dropdown [collection]="addButtonOptions" *ngIf="this.showAddOptions"></app-menu-dropdown>
+  </div>
+</div>

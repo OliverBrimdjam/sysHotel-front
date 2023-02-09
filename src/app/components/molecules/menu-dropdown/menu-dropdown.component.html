@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="container--wrapper" *ngFor="let cell of collection">
+    <div class="container--wrapper__cell">
+      <mat-icon>{{cell.icon}}</mat-icon>
+      <app-button-basic [content]="cell.content"></app-button-basic>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>

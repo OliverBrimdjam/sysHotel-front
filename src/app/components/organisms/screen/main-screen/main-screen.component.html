@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="container--wrapper">
+    <app-side-bar [collection]="roomStatusList"></app-side-bar>
+    <app-room-overview class="container--wrapper__content"></app-room-overview>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="container--wrapper">
+    <app-side-bar [collection]="reservesStatusList"></app-side-bar>
+    <app-reserves-overview class="container--wrapper__content"></app-reserves-overview>
+  </div>
+</div>

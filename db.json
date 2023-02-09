@@ -1,0 +1,159 @@
+{
+  "guests": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "",
+      "phone": "",
+      "documentType": "",
+      "documentCode": ""
+
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Room 1",
+      "price": 0,
+      "status": 1,
+      "type": 1
+    }
+  ],
+  "roomStatus": [
+    {
+      "id": 1,
+      "name": "Available"
+    },
+    {
+      "id": 2,
+      "name": "Occupied"
+    },
+    {
+      "id": 3,
+      "name": "Reserved"
+    },
+    {
+      "id": 4,
+      "name": "Out of Order"
+    },
+    {
+      "id": 5,
+      "name": "Maintenance"
+    },
+    {
+      "id": 6,
+      "name": "Cleaning"
+    }
+  ],
+  "roomTypes": [
+    {
+      "id": 1,
+      "name": "Single",
+      "price": 150
+    },
+    {
+      "id": 2,
+      "name": "Twin",
+      "price": 225
+    },
+    {
+      "id": 2,
+      "name": "Double",
+      "price": 225
+    },
+    {
+      "id": 3,
+      "name": "Premium",
+      "price": 800
+    },
+    {
+      "id": 4,
+      "name": "Master",
+      "price": 3200
+    }
+  ],
+  "roomReservations": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "guestId": 1,
+      "companionId": 1,
+      "reserveStart": "2019-01-01T00:00:00",
+      "days": 10,
+      "checkIn": "2019-01-01T00:00:00",
+      "checkOut": null,
+      "status": 2
+    }
+  ],
+  "invoice": [
+    {
+      "id": 1,
+      "guestId": 1,
+      "paidValue": 0,
+      "bill": 30000
+    }
+  ],
+  "reservationStatus": [
+    {
+      "id": 1,
+      "name": "Reserved"
+    },
+    {
+      "id": 2,
+      "name": "Checked In"
+    },
+    {
+      "id": 3,
+      "name": "Checked Out"
+    },
+    {
+      "id": 4,
+      "name": "Canceled"
+    }
+  ],
+  "roomServices": [
+    {
+      "id": 1,
+      "name": "Room Service",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "name": "Laundry",
+      "price": 25
+    },
+    {
+      "id": 3,
+      "name": "Food",
+      "price": 100
+    },
+    {
+      "id": 4,
+      "name": "Beverage",
+      "price": 50
+    }
+  ],
+  "roomServiceOrders": [
+    {
+      "id": 1,
+      "reservationId": 1,
+      "serviceId": 1,
+      "status": 1
+    }
+  ],
+  "serviceStatus": [
+    {
+      "id": 1,
+      "name": "Ordered"
+    },
+    {
+      "id": 2,
+      "name": "Delivered"
+    },
+    {
+      "id": 3,
+      "name": "Canceled"
+    }
+  ]
+
+}
