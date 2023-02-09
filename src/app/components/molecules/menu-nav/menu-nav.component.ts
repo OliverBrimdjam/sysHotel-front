@@ -37,7 +37,6 @@ export class MenuNavComponent implements OnInit {
 
   toggleAddOptions() {
     this.showAddOptions = !this.showAddOptions;
-    console.log('toggle', this.showAddOptions);
   }
 
 }

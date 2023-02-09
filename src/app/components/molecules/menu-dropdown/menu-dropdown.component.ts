@@ -12,7 +12,6 @@ export class MenuDropdownComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('collection', this.collection);
 
   }
 
