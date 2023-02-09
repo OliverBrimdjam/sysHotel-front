@@ -36,8 +36,7 @@ import { GuestsOverviewComponent } from './components/molecules/guests-overview/
 import { ChartOverviewComponent } from './components/molecules/chart-overview/chart-overview.component';
 import { OrdersOverviewComponent } from './components/molecules/orders-overview/orders-overview.component';
 import { OrdersScreenComponent } from './components/organisms/screen/orders-screen/orders-screen.component';
-
-
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -79,6 +78,7 @@ import { OrdersScreenComponent } from './components/organisms/screen/orders-scre
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
