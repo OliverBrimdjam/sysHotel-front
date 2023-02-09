@@ -16,10 +16,15 @@ export class MenuNavComponent implements OnInit {
   guestIcon = 'person';
   guestsUrl = '/guests';
   addIcon = 'add';
-
   ordersIcon = 'room_service';
   ordersUrl = '/orders';
-
+  addButtonOptions = [
+    { content: 'Add Reserve', icon: 'calendar_today'},
+    { content: 'Add Order', icon: 'room_service'},
+    { content: 'Add Guest', icon: 'person'},
+    { content: 'Add Room', icon: 'meeting_room'}
+  ]
+  showAddOptions = false;
 
   constructor(private router: Router) { }
 
@@ -28,6 +33,11 @@ export class MenuNavComponent implements OnInit {
 
   redirectTo(url: string) {
     this.router.navigate([url]);
+  }
+
+  toggleAddOptions() {
+    this.showAddOptions = !this.showAddOptions;
+    console.log('toggle', this.showAddOptions);
   }
 
 }
