@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Add New Guest:</h2>
+  <form class="container__form" (ngSubmit)="submit()" [formGroup]="addGuestForm" #formDir="ngForm">
+    <div class="container__form--wrapper">
+      <div class="container__form__labelBlock">
+        <div class="container__form__labelBlock__lableFrame"><label for="name">Name:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="email">Email:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="tel">Phone:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="docType">Document Type:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="docCode">Document Code:</label></div>
+      </div>
+      <div class="container__form__inputBlock">
+        <div class="container__form__inputBlock__inputFrame"><input type="text" name="name" placeholder="ex: Antonio Carlos Silva Goberi" formControlName="nameField" required/><p *ngIf="nameField.invalid && formDir.submitted" class="validation--error">*required</p></div>
+        <div class="container__form__inputBlock__inputFrame"><input type="email" name="email" placeholder="ex: AntoniocarlosX39@x-mail.com" formControlName="emailField" required/><p *ngIf="emailField.invalid && formDir.submitted" class="validation--error">*required</p></div>
+        <div class="container__form__inputBlock__inputFrame"><input type="tel" name="tel" placeholder="ex: +55-352-7896-6874"/></div>
+        <div class="container__form__inputBlock__inputFrame"><input type="text" name="docType" placeholder="ex: passport"/></div>
+        <div class="container__form__inputBlock__inputFrame"><input type="text" name="docCode" placeholder="ex: 333.654.987-98"/></div>
+      </div>
+    </div>
+    <div class="container__form__buttonBlock">
+      <app-button-basic mat-dialog-close (click)="cancelSubmit($event)" [content]="'Cancel'"></app-button-basic>
+      <app-button-flat [content]="'Save'"></app-button-flat>
+    </div>
+
+  </form>
+</div>

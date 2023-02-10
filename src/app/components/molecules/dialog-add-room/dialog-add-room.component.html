@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Add New Room:</h2>
+  <form class="container__form" (ngSubmit)="submit()" [formGroup]="addRoomForm" #formDir="ngForm">
+    <div class="container__form--wrapper">
+      <div class="container__form__labelBlock">
+        <div class="container__form__labelBlock__lableFrame"><label for="roomName">Room Name:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="price">Price:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="status">Status:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="type">Type:</label></div>
+      </div>
+      <div class="container__form__inputBlock">
+        <div class="container__form__inputBlock__inputFrame"><input type="text" name="name"
+            placeholder="ex: Room 555" formControlName="nameField" required />
+          <p *ngIf="nameField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame"><input type="priceField" name="priceField"
+            placeholder="ex: 15.11" formControlName="priceField" required />
+          <p *ngIf="priceField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <select name="statusField" formControlName="statusField" id="statusField">
+            <option value="1">Available</option>
+            <option value="2">Occupied</option>
+            <option value="3">Reserved</option>
+            <option value="4">Out of Order</option>
+            <option value="5">Maintenance</option>
+            <option value="6">Cleaning</option>
+          </select>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <select name="typeField" formControlName="typeField" id="typeField">
+            <option value="1">Single</option>
+            <option value="2">Twin</option>
+            <option value="3">Double</option>
+            <option value="4">Premium</option>
+            <option value="5">Master</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="container__form__buttonBlock">
+      <app-button-basic mat-dialog-close (click)="cancelSubmit($event)" [content]="'Cancel'"></app-button-basic>
+      <app-button-flat [content]="'Save'"></app-button-flat>
+    </div>
+
+  </form>
+</div>

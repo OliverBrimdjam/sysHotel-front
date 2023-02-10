@@ -1,0 +1,63 @@
+<div class="container">
+  <h2>Add New Order:</h2>
+  <form class="container__form" (ngSubmit)="submit()" [formGroup]="addOrderForm" #formDir="ngForm">
+    <div class="container__form--wrapper">
+      <div class="container__form__labelBlock">
+        <div class="container__form__labelBlock__lableFrame"><label for="name">Guest:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="email">Service:</label></div>
+      </div>
+      <div class="container__form__inputBlock">
+        <div class="container__form__inputBlock__inputFrame">
+          <input
+            type="text"
+            name="guest"
+            placeholder="ex: Antonio Carlos Silva Goberi"
+            formControlName="guestField"
+            required
+          />
+          <p *ngIf="guestField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <input
+            type="radio"
+            id="roomService"
+            name="serviceField"
+            formControlName="serviceField"
+            value="1"
+            required
+          /><label for="roomService">Room service</label>
+          <input
+            type="radio"
+            id="laundry"
+            name="serviceField"
+            formControlName="serviceField"
+            value="2"
+            required
+          /><label for="laundry">Laundry</label>
+          <input
+            type="radio"
+            id="food"
+            name="serviceField"
+            formControlName="serviceField"
+            value="3"
+            required
+          /><label for="food">Food</label>
+          <input
+            type="radio"
+            id="Beverage"
+            name="serviceField"
+            formControlName="serviceField"
+            value="4"
+            required
+          /><label for="Beverage">Beverage</label>
+          <p *ngIf="serviceField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+      </div>
+    </div>
+    <div class="container__form__buttonBlock">
+      <app-button-basic mat-dialog-close (click)="cancelSubmit($event)" [content]="'Cancel'"></app-button-basic>
+      <app-button-flat [content]="'Save'"></app-button-flat>
+    </div>
+
+  </form>
+</div>
