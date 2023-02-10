@@ -8,32 +8,32 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./dialog-add-order.component.scss']
 })
 export class DialogAddOrderComponent implements OnInit {
-  addGuestForm!: FormGroup
+  addOrderForm!: FormGroup
 
   constructor(
     public dialogRef: MatDialogRef<DialogAddOrderComponent>
   ) { }
 
   ngOnInit(): void {
-    this.addGuestForm = new FormGroup({
+    this.addOrderForm = new FormGroup({
       guestField: new FormControl('', [Validators.required, Validators.minLength(3)]),
       serviceField: new FormControl('', [Validators.required]),
     });
   }
 
   get guestField() {
-    return this.addGuestForm.get('guestField')!;
+    return this.addOrderForm.get('guestField')!;
   }
 
   get serviceField() {
-    return this.addGuestForm.get('serviceField')!;
+    return this.addOrderForm.get('serviceField')!;
   }
 
   submit() {
-    if (this.addGuestForm.invalid) {
+    if (this.addOrderForm.invalid) {
       return;
     }
-    console.log('submit', this.addGuestForm.value);
+    console.log('submit', this.addOrderForm.value);
     this.dialogRef.close();
   }
 
