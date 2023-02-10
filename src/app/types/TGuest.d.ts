@@ -6,5 +6,5 @@ export type TGuest = {
   documentType: string;
   documentCode: string;
   createdAt: Date;
-  updatedAt: Date;
+  updatedAt?: Date;
 }
