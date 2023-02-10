@@ -1,4 +1,3 @@
-import { ComponentType } from '@angular/cdk/portal';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({

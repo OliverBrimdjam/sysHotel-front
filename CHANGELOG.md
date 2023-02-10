@@ -1,3 +1,11 @@
+version v0.3.0 [10/02/23]
+
+#feature
+
+- create base dialog to add entities;
+
+---
+
 version v0.2.0 [09/02/23]
 
 #feature

@@ -9,7 +9,6 @@ export class ButtonBasicComponent implements OnInit {
   @Input() content: string = '';
   @Input() colorSchema: 'primary' | 'secondary' | 'default' | '' = 'primary';
   @Input() url: string | undefined = undefined;
-  @Input() action: () => void = () => { };
   @Input() disabled: boolean = false;
 
   constructor() { }

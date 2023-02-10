@@ -5,7 +5,10 @@
   <app-button-icon [iconType]="ordersIcon"  (click)="redirectTo(ordersUrl)"></app-button-icon>
   <app-button-icon [iconType]="guestIcon"  (click)="redirectTo(guestsUrl)"></app-button-icon>
   <div>
-    <app-button-icon [iconType]="addIcon" (click)="toggleAddOptions()"></app-button-icon>
-    <app-menu-dropdown [collection]="addButtonOptions" *ngIf="this.showAddOptions"></app-menu-dropdown>
+    <app-button-icon [iconType]="addIcon" mat-button [matMenuTriggerFor]="menu" #menuTrigger></app-button-icon>
+
+    <mat-menu #menu>
+      <app-menu-dropdown [collection]="addButtonOptions" ></app-menu-dropdown>
+    </mat-menu>
   </div>
 </div>
