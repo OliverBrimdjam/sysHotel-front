@@ -1,1 +1,49 @@
-<p>dialog-add-reserve works!</p>
+<div class="container">
+  <h2>Add New Reserve:</h2>
+  <form class="container__form" (ngSubmit)="submit()" [formGroup]="addRoomForm" #formDir="ngForm">
+    <div class="container__form--wrapper">
+      <div class="container__form__labelBlock">
+        <div class="container__form__labelBlock__lableFrame"><label for="roomName">Room Name:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="price">Guest Name:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="status">Companion Name:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="type">Reserve Start:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="type">Number of Days:</label></div>
+        <div class="container__form__labelBlock__lableFrame"><label for="type">Reserve Status:</label></div>
+      </div>
+      <div class="container__form__inputBlock">
+        <div class="container__form__inputBlock__inputFrame">
+          <input type="text" name="roomField" placeholder="ex: Room 555" formControlName="roomField" id="roomField" required />
+          <p *ngIf="roomField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <input type="text" name="guestField" placeholder="ex: Pedro Padilha Santos" formControlName="guestField" id="guestField" required />
+          <p *ngIf="guestField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <input type="text" name="companionField" placeholder="ex: Alexandre Varret de Afonso " formControlName="companionField" id="companionField" />
+          <p *ngIf="companionField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <input type="date" name="dateField" formControlName="dateField" id="dateField" required />
+          <p *ngIf="dateField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <input type="number" name="daysField" formControlName="daysField" placeholder="ex: 7" id="daysField" required />
+          <p *ngIf="daysField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+        <div class="container__form__inputBlock__inputFrame">
+          <select name="statusField" formControlName="statusField" id="statusField" required>
+            <option value="1">Reserved</option>
+            <option value="2">Checked In</option>
+          </select>
+          <p *ngIf="statusField.invalid && formDir.submitted" class="validation--error">*required</p>
+        </div>
+      </div>
+    </div>
+    <div class="container__form__buttonBlock">
+      <app-button-basic mat-dialog-close (click)="cancelSubmit($event)" [content]="'Cancel'"></app-button-basic>
+      <app-button-flat [content]="'Save'"></app-button-flat>
+    </div>
+
+  </form>
+</div>
