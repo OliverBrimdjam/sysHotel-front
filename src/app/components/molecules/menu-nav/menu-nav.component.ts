@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import {Router} from "@angular/router"
 import { DialogAddReserveComponent } from '../dialog-add-reserve/dialog-add-reserve.component';
@@ -6,6 +6,7 @@ import { ComponentType } from '@angular/cdk/portal';
 import { DialogAddRoomComponent } from '../dialog-add-room/dialog-add-room.component';
 import { DialogAddGuestComponent } from '../dialog-add-guest/dialog-add-guest.component';
 import { DialogAddOrderComponent } from '../dialog-add-order/dialog-add-order.component';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-menu-nav',
@@ -13,6 +14,7 @@ import { DialogAddOrderComponent } from '../dialog-add-order/dialog-add-order.co
   styleUrls: ['./menu-nav.component.scss']
 })
 export class MenuNavComponent implements OnInit {
+  @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
   homeIcon = 'home';
   homeUrl = '/';
   historyIcon = 'history';
@@ -42,10 +44,6 @@ export class MenuNavComponent implements OnInit {
 
   redirectTo(url: string) {
     this.router.navigate([url]);
-  }
-
-  toggleAddOptions() {
-    this.showAddOptions = !this.showAddOptions;
   }
 
   openAddDialog(component: ComponentType<unknown>) {

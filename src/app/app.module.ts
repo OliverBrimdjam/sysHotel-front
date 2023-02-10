@@ -44,6 +44,7 @@ import { DialogAddGuestComponent } from './components/molecules/dialog-add-guest
 import { DialogAddOrderComponent } from './components/molecules/dialog-add-order/dialog-add-order.component';
 import { DialogAddRoomComponent } from './components/molecules/dialog-add-room/dialog-add-room.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -76,7 +77,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DialogAddReserveComponent,
     DialogAddGuestComponent,
     DialogAddOrderComponent,
-    DialogAddRoomComponent
+    DialogAddRoomComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,7 +94,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgChartsModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
