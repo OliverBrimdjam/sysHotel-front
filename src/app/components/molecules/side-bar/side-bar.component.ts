@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
   @Input() title: string | undefined = undefined;
-  @Input() collection: any[] = [];
+  @Input() collection: any[] | null = [];
   @Input() buttonColor: 'primary' | 'secondary' | 'default' | '' = 'primary';
   @Input() disabled = false;
 
