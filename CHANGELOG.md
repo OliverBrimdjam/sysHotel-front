@@ -1,3 +1,12 @@
+version v0.4.0 [11/02/23]
+
+#feature
+
+- Http services implementation;
+- Store services implementation;
+
+---
+
 version v0.3.0 [10/02/23]
 
 #feature
