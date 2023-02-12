@@ -49,7 +49,8 @@ import { TableRoomOverviewComponent } from './components/molecules/table-room-ov
 import { TableReservesOverviewComponent } from './components/molecules/table-reserves-overview/table-reserves-overview.component';
 import { TableChartOverviewComponent } from './components/molecules/table-chart-overview/table-chart-overview.component';
 import { TableOrdersOverviewComponent } from './components/molecules/table-orders-overview/table-orders-overview.component';
-import { TableGuestsOverviewComponent } from './components/molecules/table-guests-overview/table-guests-overview.component'
+import { TableGuestsOverviewComponent } from './components/molecules/table-guests-overview/table-guests-overview.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -105,7 +106,8 @@ import { TableGuestsOverviewComponent } from './components/molecules/table-guest
     FormsModule,
     ReactiveFormsModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
