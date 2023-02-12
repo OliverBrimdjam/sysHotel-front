@@ -27,8 +27,7 @@ export class TableReservesOverviewComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getRoomsList();
-    console.log('no onInit da table-room-overview', this.collection);
+    this.getReservationList();
   }
 
   ngAfterViewInit() {
@@ -44,7 +43,7 @@ export class TableReservesOverviewComponent implements OnInit {
     }
   }
 
-  getRoomsList() {
+  getReservationList() {
     this.reservationStateService.getReservationState().subscribe(reservations => {
       this.collection = reservations.map((reservation) => {
         return { id: reservation.id, reservationStatus: reservation.reservationStatusId, reserveStart: reservation.reserveStart, checkIn: reservation.checkIn }

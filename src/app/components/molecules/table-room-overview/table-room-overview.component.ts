@@ -28,7 +28,6 @@ export class TableRoomOverviewComponent implements OnInit {
   ngOnInit(): void {
 
     this.getRoomsList();
-    console.log('no onInit da table-room-overview', this.roomCollection);
   }
 
   ngAfterViewInit() {
