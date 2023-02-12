@@ -1,3 +1,11 @@
+version v0.5.0 [12/02/23]
+
+#feature
+
+- table overviews implementations;
+
+---
+
 version v0.4.0 [11/02/23]
 
 #feature

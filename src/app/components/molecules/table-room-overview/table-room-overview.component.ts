@@ -3,7 +3,6 @@ import { FormControl } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { RoomService } from 'src/app/services/room.service';
 import { RoomStateService } from 'src/app/store/room-state.service';
 
 @Component({
@@ -12,7 +11,6 @@ import { RoomStateService } from 'src/app/store/room-state.service';
   styleUrls: ['./table-room-overview.component.scss']
 })
 export class TableRoomOverviewComponent implements OnInit {
-  // @Input() roomCollection: any[] | undefined = []
   roomCollection: any[] | undefined = []
   displayedColumns: string[] = ['Name', 'Status', 'Type'];
   dataSource!: MatTableDataSource<any>;
@@ -30,7 +28,6 @@ export class TableRoomOverviewComponent implements OnInit {
   ngOnInit(): void {
 
     this.getRoomsList();
-    console.log('no onInit da table-room-overview', this.roomCollection);
   }
 
   ngAfterViewInit() {

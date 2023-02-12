@@ -16,22 +16,22 @@ export class GuestService {
   ) { }
 
   get(): Observable<TGuest[]> {
-    return this.http.get<TGuest[]>(`${this.apiURL}/guests`);
+    return this.http.get<TGuest[]>(`${this.apiURL}/guest`);
   }
 
   getById(id: number): Observable<TGuest> {
-    return this.http.get<TGuest>(`${this.apiURL}/guests/${id}`);
+    return this.http.get<TGuest>(`${this.apiURL}/guest/${id}`);
   }
 
   create(guest: TGuest): Observable<TGuest> {
-    return this.http.post<TGuest>(`${this.apiURL}/guests`, guest);
+    return this.http.post<TGuest>(`${this.apiURL}/guest`, guest);
   }
 
   update(guest: TGuest): Observable<TGuest> {
-    return this.http.put<TGuest>(`${this.apiURL}/guests`, guest);
+    return this.http.put<TGuest>(`${this.apiURL}/guest`, guest);
   }
 
   delete(id: number): Observable<TGuest> {
-    return this.http.delete<TGuest>(`${this.apiURL}/guests/${id}`);
+    return this.http.delete<TGuest>(`${this.apiURL}/guest/${id}`);
   }
 }
