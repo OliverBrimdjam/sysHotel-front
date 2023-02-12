@@ -46,7 +46,11 @@ import { DialogAddRoomComponent } from './components/molecules/dialog-add-room/d
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
-import { TableRoomOverviewComponent } from './components/molecules/table-room-overview/table-room-overview.component'
+import { TableRoomOverviewComponent } from './components/molecules/table-room-overview/table-room-overview.component';
+import { TableReservesOverviewComponent } from './components/molecules/table-reserves-overview/table-reserves-overview.component';
+import { TableChartOverviewComponent } from './components/molecules/table-chart-overview/table-chart-overview.component';
+import { TableOrdersOverviewComponent } from './components/molecules/table-orders-overview/table-orders-overview.component';
+import { TableGuestsOverviewComponent } from './components/molecules/table-guests-overview/table-guests-overview.component'
 
 
 @NgModule({
@@ -81,6 +85,10 @@ import { TableRoomOverviewComponent } from './components/molecules/table-room-ov
     DialogAddOrderComponent,
     DialogAddRoomComponent,
     TableRoomOverviewComponent,
+    TableReservesOverviewComponent,
+    TableChartOverviewComponent,
+    TableOrdersOverviewComponent,
+    TableGuestsOverviewComponent,
   ],
   imports: [
     BrowserModule,
