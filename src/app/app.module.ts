@@ -45,7 +45,8 @@ import { DialogAddOrderComponent } from './components/molecules/dialog-add-order
 import { DialogAddRoomComponent } from './components/molecules/dialog-add-room/dialog-add-room.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { TableRoomOverviewComponent } from './components/molecules/table-room-overview/table-room-overview.component'
 
 
 @NgModule({
@@ -79,6 +80,7 @@ import { HttpClientModule } from '@angular/common/http'
     DialogAddGuestComponent,
     DialogAddOrderComponent,
     DialogAddRoomComponent,
+    TableRoomOverviewComponent,
   ],
   imports: [
     BrowserModule,
