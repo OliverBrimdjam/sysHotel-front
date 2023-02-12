@@ -1,3 +1,13 @@
+version v0.6.0 [12/02/23]
+
+#feature
+
+- chart component basic implementation;
+- roomHistory state and http services implementation;
+- library chart.js and ng2-charts version fix
+
+---
+
 version v0.5.0 [12/02/23]
 
 #feature
