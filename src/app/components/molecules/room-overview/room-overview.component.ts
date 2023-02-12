@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-room-overview',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./room-overview.component.scss']
 })
 export class RoomOverviewComponent implements OnInit {
+  @Input() roomCollection = []
 
   constructor() { }
 
