@@ -44,7 +44,9 @@ import { DialogAddGuestComponent } from './components/molecules/dialog-add-guest
 import { DialogAddOrderComponent } from './components/molecules/dialog-add-order/dialog-add-order.component';
 import { DialogAddRoomComponent } from './components/molecules/dialog-add-room/dialog-add-room.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { TableRoomOverviewComponent } from './components/molecules/table-room-overview/table-room-overview.component'
 
 
 @NgModule({
@@ -78,6 +80,7 @@ import { MatMenuModule} from '@angular/material/menu';
     DialogAddGuestComponent,
     DialogAddOrderComponent,
     DialogAddRoomComponent,
+    TableRoomOverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,8 @@ import { MatMenuModule} from '@angular/material/menu';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomTypeStateService } from 'src/app/store/room-type-state.service';
 
 @Component({
   selector: 'app-main-screen',
@@ -6,24 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-screen.component.scss']
 })
 export class MainScreenComponent implements OnInit {
-  roomStatusList: any[] = [
-    { nome: 'Available', color: 'primary', disabled: false },
-    { nome: 'Occupied', color: 'primary', disabled: false },
-    { nome: 'Reserved', color: 'primary', disabled: false },
-    { nome: 'Out of Order', color: 'primary', disabled: false },
-    { nome: 'Maintenance', color: 'primary', disabled: false },
-    { nome: 'cleaning', color: 'primary', disabled: false },
-  ]
-  reservesStatusList: any[] = [
-    { nome: 'Reserved', color: 'primary', disabled: false },
-    { nome: 'Checked In', color: 'primary', disabled: false },
-    { nome: 'Checked Out', color: 'primary', disabled: false },
-    { nome: 'Canceled', color: 'primary', disabled: false },
+  roomTypeList: any[] = [];
+  roomsList: any[] = [];
+  reservesStatusList: any[]= [
+    { name: 'Reserved', color: 'primary', disabled: false },
+    { name: 'Checked In', color: 'primary', disabled: false },
+    { name: 'Checked Out', color: 'primary', disabled: false },
+    { name: 'Canceled', color: 'primary', disabled: false },
   ]
 
-  constructor() { }
+  constructor(
+    private roomTypeState: RoomTypeStateService,
+  ) { }
 
   ngOnInit(): void {
+    this.getRoomTypesList();
   }
 
+  getRoomTypesList() {
+    this.roomTypeState.getRoomType().subscribe(roomTypes => {
+      this.roomTypeList = roomTypes.map((room) => {
+        return { name: room.name, color: 'primary', disabled: false }
+      });
+    });
+  }
 }
