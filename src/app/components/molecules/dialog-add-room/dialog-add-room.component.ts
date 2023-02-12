@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { RoomStateService } from 'src/app/store/room-state.service';
 
 @Component({
   selector: 'app-dialog-add-room',
@@ -12,13 +13,14 @@ export class DialogAddRoomComponent implements OnInit {
   addRoomForm!: FormGroup
 
   constructor(
-    public dialogRef: MatDialogRef<DialogAddRoomComponent>
+    public dialogRef: MatDialogRef<DialogAddRoomComponent>,
+    private roomStateService: RoomStateService
   ) { }
 
   ngOnInit(): void {
     this.addRoomForm = new FormGroup({
       nameField: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      priceField: new FormControl('', [Validators.required]),
+      // priceField: new FormControl('', [Validators.required]),
       statusField: new FormControl('', [Validators.required]),
       typeField: new FormControl('', [Validators.required]),
     });
@@ -28,9 +30,9 @@ export class DialogAddRoomComponent implements OnInit {
     return this.addRoomForm.get('nameField')!;
   }
 
-  get priceField() {
-    return this.addRoomForm.get('priceField')!;
-  }
+  // get priceField() {
+  //   return this.addRoomForm.get('priceField')!;
+  // }
 
   get statusField() {
     return this.addRoomForm.get('statusField')!;
@@ -45,7 +47,10 @@ export class DialogAddRoomComponent implements OnInit {
       return;
     }
     console.log('submit', this.addRoomForm.value);
+    this.roomStateService.add(this.addRoomForm.value);
+
     this.dialogRef.close();
+
   }
 
   cancelSubmit(e: Event) {

@@ -4,7 +4,6 @@
     <div class="container__form--wrapper">
       <div class="container__form__labelBlock">
         <div class="container__form__labelBlock__lableFrame"><label for="roomName">Room Name:</label></div>
-        <div class="container__form__labelBlock__lableFrame"><label for="price">Price:</label></div>
         <div class="container__form__labelBlock__lableFrame"><label for="status">Status:</label></div>
         <div class="container__form__labelBlock__lableFrame"><label for="type">Type:</label></div>
       </div>
@@ -12,10 +11,6 @@
         <div class="container__form__inputBlock__inputFrame"><input type="text" name="name"
             placeholder="ex: Room 555" formControlName="nameField" required />
           <p *ngIf="nameField.invalid && formDir.submitted" class="validation--error">*required</p>
-        </div>
-        <div class="container__form__inputBlock__inputFrame"><input type="priceField" name="priceField"
-            placeholder="ex: 15.11" formControlName="priceField" required />
-          <p *ngIf="priceField.invalid && formDir.submitted" class="validation--error">*required</p>
         </div>
         <div class="container__form__inputBlock__inputFrame">
           <select name="statusField" formControlName="statusField" id="statusField">
@@ -42,6 +37,5 @@
       <app-button-basic mat-dialog-close (click)="cancelSubmit($event)" [content]="'Cancel'"></app-button-basic>
       <app-button-flat [content]="'Save'"></app-button-flat>
     </div>
-
   </form>
 </div>

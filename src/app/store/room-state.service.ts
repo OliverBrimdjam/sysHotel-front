@@ -27,6 +27,7 @@ private roomState = new BehaviorSubject<TRoom[]>([]);
 
   add(room: TRoom) {
     this.roomService.create(room);
+
     this.sync();
   }
 
