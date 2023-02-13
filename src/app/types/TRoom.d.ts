@@ -1,8 +1,8 @@
 export type TRoom = {
-  id: number;
+  id?: number;
   name: string;
   roomStatusId: number;
   roomTypeId: number;
-  createdAt: Date;
+  createdAt?: Date;
   updatedAt?: Date;
 }
