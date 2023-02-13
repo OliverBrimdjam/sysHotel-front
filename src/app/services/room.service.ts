@@ -23,6 +23,7 @@ export class RoomService {
   }
 
   create(room: TRoom): Observable<TRoom> {
+    console.log('dentro do service (create)', room)
     return this.http.post<TRoom>(`${this.apiURL}/room`, room);
   }
 

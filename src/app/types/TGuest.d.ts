@@ -1,10 +1,10 @@
 export type TGuest = {
-  id: number;
+  id?: number;
   name: string;
   email: string;
   phone?: string;
-  documentType: string;
-  documentCode: string;
-  createdAt: Date;
+  documentType?: string;
+  documentCode?: string;
+  createdAt?: Date;
   updatedAt?: Date;
 }

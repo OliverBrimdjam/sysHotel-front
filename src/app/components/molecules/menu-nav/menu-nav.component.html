@@ -7,7 +7,7 @@
   <div>
     <app-button-icon [iconType]="addIcon" mat-button [matMenuTriggerFor]="menu" #menuTrigger></app-button-icon>
 
-    <mat-menu #menu>
+    <mat-menu #menu class="container__menuBox">
       <app-menu-dropdown [collection]="addButtonOptions" ></app-menu-dropdown>
     </mat-menu>
   </div>

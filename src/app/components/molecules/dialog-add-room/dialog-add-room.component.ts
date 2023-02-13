@@ -47,7 +47,13 @@ export class DialogAddRoomComponent implements OnInit {
       return;
     }
     console.log('submit', this.addRoomForm.value);
-    this.roomStateService.add(this.addRoomForm.value);
+    this.roomStateService.add(
+      {
+        name: this.addRoomForm.value.nameField,
+        roomStatusId: this.addRoomForm.value.statusField,
+        roomTypeId: this.addRoomForm.value.typeField,
+      }
+    );
 
     this.dialogRef.close();
 
